@@ -1,0 +1,21 @@
+{
+  "name": "vue-hono-cloudflare",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "web",
+    "server"
+  ],
+  "scripts": {
+    "dev": "yarn workspace web run dev",
+    "dev:server": "yarn workspace server run dev",
+    "build": "yarn workspace web run build",
+    "build:server": "yarn workspace server run build",
+    "lint": "yarn workspace web run lint",
+    "format": "prettier --write 'web/**/*.{ts,json,yaml,vue}' 'server/**/*.{ts,json}' '*.json' '*.md'"
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2"
+  }
+}
