@@ -18,7 +18,8 @@ const lang = {
   },
   about: {
     title: "このスターターキットについて",
-    description: "Vue 3、Hono、Cloudflare Workersを組み合わせた本番環境対応のスターターキットです。TypeScript、Tailwind CSS v4、shadcn-vueコンポーネント、Vue I18nによる国際化対応が含まれています。",
+    description:
+      "Vue 3、Hono、Cloudflare Workersを組み合わせた本番環境対応のスターターキットです。TypeScript、Tailwind CSS v4、shadcn-vueコンポーネント、Vue I18nによる国際化対応が含まれています。",
     techStack: {
       title: "技術スタック",
       frontend: "フロントエンド: Vue 3.5 + TypeScript + Vite + Tailwind CSS v4",

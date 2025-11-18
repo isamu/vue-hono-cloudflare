@@ -13,7 +13,8 @@ const lang = {
   },
   about: {
     title: "About This Starter Kit",
-    description: "This is a production-ready starter kit combining Vue 3, Hono, and Cloudflare Workers. It includes TypeScript, Tailwind CSS v4, shadcn-vue components, and Vue I18n for internationalization.",
+    description:
+      "This is a production-ready starter kit combining Vue 3, Hono, and Cloudflare Workers. It includes TypeScript, Tailwind CSS v4, shadcn-vue components, and Vue I18n for internationalization.",
     techStack: {
       title: "Technology Stack",
       frontend: "Frontend: Vue 3.5 + TypeScript + Vite + Tailwind CSS v4",

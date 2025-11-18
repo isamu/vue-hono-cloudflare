@@ -47,13 +47,10 @@
 </template>
 
 <script setup lang="ts">
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import Navigation from "@/components/Navigation.vue";
 
 import { useI18n } from "vue-i18n";
 const { t } = useI18n();
-
 </script>
 
 <style scoped></style>
