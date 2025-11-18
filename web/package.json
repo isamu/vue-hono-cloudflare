@@ -8,7 +8,7 @@
     "build": "vue-tsc --build && vite build",
     "preview": "vite preview",
     "type-check": "vue-tsc --build",
-    "lint": "eslint",
+    "lint": "eslint .",
     "format": "prettier --write 'src/**/*.{ts,json,yaml,vue}' *.json *.ts *.mjs"
   },
   "dependencies": {
