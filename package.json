@@ -13,6 +13,7 @@
     "build": "yarn workspace web run build",
     "build:server": "yarn workspace server run build",
     "lint": "yarn workspace web run lint",
+    "type-check": "yarn workspace web type-check",
     "format": "prettier --write 'web/**/*.{ts,json,yaml,vue}' 'server/**/*.{ts,json}' '*.json' '*.md'"
   },
   "devDependencies": {
