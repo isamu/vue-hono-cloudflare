@@ -8,10 +8,10 @@
     "cf-typegen": "wrangler types"
   },
   "dependencies": {
-    "hono": "4.10.3"
+    "hono": "4.10.6"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^4.20250107.0",
+    "@cloudflare/workers-types": "^4.20251118.0",
     "typescript": "~5.9.3",
     "wrangler": "^4.44.0"
   }
