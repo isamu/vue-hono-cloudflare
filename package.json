@@ -17,6 +17,6 @@
     "format": "prettier --write 'web/**/*.{ts,json,yaml,vue}' 'server/**/*.{ts,json}' '*.json' '*.md'"
   },
   "devDependencies": {
-    "prettier": "^3.8.5"
+    "prettier": "^3.9.6"
   }
 }
