@@ -41,3 +41,6 @@ coverage
 
 # Playwright MCP
 .playwright-mcp
+
+# jscpd duplication-scan output (see .github/workflows/duplication-scan.yaml)
+report/
