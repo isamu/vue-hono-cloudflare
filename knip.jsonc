@@ -1,0 +1,35 @@
+{
+  "$schema": "https://unpkg.com/knip@6/schema.json",
+  // Yarn-workspaces monorepo: web/ (Vue 3 + Vite app) and server/ (Hono Cloudflare Worker).
+  // Analysis is scoped to the web app's source via workspaces["web"].project below; server/src
+  // is a single trivial Worker entry (wrangler.jsonc "main") that knip resolves from its own
+  // workspace defaults. knip's Vite plugin auto-detects the app entry from web/index.html +
+  // web/vite.config.ts, so main.ts and everything it transitively imports (App.vue, router,
+  // views, i18n) is reachable and is not listed here.
+  "ignoreExportsUsedInFile": true,
+  "includeEntryExports": false,
+  // tailwindcss and tw-animate-css are pulled in via `@import` in web/src/assets/main.css, not
+  // by any TS/Vue import. The project scope is {ts,vue}, so those CSS imports are not followed
+  // and the packages would otherwise read as unused; they are load-bearing.
+  "ignoreDependencies": ["tailwindcss", "tw-animate-css"],
+  "workspaces": {
+    "web": {
+      "project": ["src/**/*.{ts,vue}"],
+    },
+  },
+  "rules": {
+    // Warn mode: every rule is "warn" (reported, exit 0) or "off". Nothing gates CI here.
+    "files": "warn",
+    "dependencies": "warn",
+    "devDependencies": "warn",
+    "unlisted": "warn",
+    "exports": "warn",
+    "types": "warn",
+    "unresolved": "off",
+    "binaries": "off",
+    "nsExports": "off",
+    "nsTypes": "off",
+    "enumMembers": "off",
+    "duplicates": "off",
+  },
+}

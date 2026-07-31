@@ -14,9 +14,11 @@
     "build:server": "yarn workspace server run build",
     "lint": "yarn workspace web run lint",
     "type-check": "yarn workspace web type-check",
+    "knip": "knip",
     "format": "prettier --write 'web/**/*.{ts,json,yaml,vue}' 'server/**/*.{ts,json}' '*.json' '*.md'"
   },
   "devDependencies": {
+    "knip": "^6",
     "prettier": "^3.9.6"
   }
 }
