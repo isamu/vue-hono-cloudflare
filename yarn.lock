@@ -2098,7 +2098,7 @@ eslint-plugin-sonarjs@^4.2.0:
     typescript ">=5 <6.1.0"
     yaml "^2.9.0"
 
-eslint-plugin-vue@^10.8.0:
+eslint-plugin-vue@^10.10.0:
   version "10.10.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-vue/-/eslint-plugin-vue-10.10.0.tgz#e957b56853dea54e738136d849d85929954bdf3d"
   integrity sha512-dL9x9rBHqqNcByWiLOHK6L0SB97V82/NC0cZRn9cXPjM7pCuWlpQQP9bFH4vjBv80ej1ZpzAkuD8zWH1o9bZbA==
