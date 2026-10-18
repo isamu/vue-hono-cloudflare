@@ -36,7 +36,9 @@ jobs:
       run: yarn install --frozen-lockfile
     - name: Lint web
       run: yarn run lint
-    - name: Type check web
+    - name: Type check web and server
       run: yarn run type-check
     - name: Build web
       run: yarn run build
+    - name: Build server (Worker bundle, dry run)
+      run: yarn run build:server

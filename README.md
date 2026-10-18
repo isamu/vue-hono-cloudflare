@@ -76,9 +76,18 @@ yarn build
 
 **Backend**
 
+Builds web first (the Worker serves `web/dist` as static assets), then bundles the Worker into `server/dist` with `wrangler deploy --dry-run`. Nothing is deployed.
+
 ```bash
 yarn build:server
-# or: yarn workspace server run build
+# or, when web/dist already exists: yarn workspace server run build
+```
+
+### Type Checking
+
+```bash
+# web (vue-tsc) and server (tsc --noEmit)
+yarn type-check
 ```
 
 ### Linting & Formatting
