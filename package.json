@@ -11,9 +11,9 @@
     "dev": "yarn workspace web run dev",
     "dev:server": "yarn workspace server run dev",
     "build": "yarn workspace web run build",
-    "build:server": "yarn workspace server run build",
+    "build:server": "yarn build && yarn workspace server run build",
     "lint": "yarn workspace web run lint",
-    "type-check": "yarn workspace web type-check",
+    "type-check": "yarn workspace web type-check && yarn workspace server type-check",
     "knip": "knip",
     "format": "prettier --write 'web/**/*.{ts,json,yaml,vue}' 'server/**/*.{ts,json}' '*.json' '*.md'"
   },

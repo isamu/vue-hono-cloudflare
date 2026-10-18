@@ -35,9 +35,10 @@ yarn dev:server
 yarn build
 # or: yarn workspace web run build
 
-# Build backend
+# Build backend: builds web first, then bundles the Worker into server/dist with
+# `wrangler deploy --dry-run` (nothing is deployed)
 yarn build:server
-# or: yarn workspace server run build
+# or, when web/dist already exists: yarn workspace server run build
 ```
 
 ### Linting and Formatting
@@ -53,8 +54,9 @@ yarn format
 ### Type Checking
 
 ```bash
-# Type check Vue files (web workspace)
-yarn workspace web run type-check
+# Type check both workspaces (web: vue-tsc, server: tsc --noEmit)
+yarn type-check
+# or one workspace: yarn workspace web run type-check / yarn workspace server run type-check
 ```
 
 ### Deployment

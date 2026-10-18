@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "wrangler dev --config ../wrangler.jsonc",
-    "cf-typegen": "wrangler types"
+    "cf-typegen": "wrangler types",
+    "build": "wrangler deploy --dry-run --cwd .. --outdir server/dist",
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "hono": "4.13.13"
