@@ -41,7 +41,6 @@ A Vue 3 + Hono + Cloudflare Workers application built with Vite and deployed on 
 - **Backend (API)**: Located under `server/`. Hono powers a Cloudflare Workers API under `/api/*`. An example endpoint `POST /api/echo` accepts JSON `{ text: string }` and returns the uppercased text.
 - **Build/Deploy**: Vite builds the SPA, and Wrangler deploys the Worker with static assets served from `web/dist` with SPA fallback handling.
 
-
 ## Setup and Commands
 
 ### Installation
@@ -53,12 +52,14 @@ yarn install
 ### Development
 
 **Frontend only (SPA with Vite dev server)**
+
 ```bash
 yarn dev
 # or: yarn workspace web run dev
 ```
 
 **Backend (API with Wrangler)**
+
 ```bash
 yarn dev:server
 # or: yarn workspace server run dev
@@ -67,12 +68,14 @@ yarn dev:server
 ### Building
 
 **Frontend**
+
 ```bash
 yarn build
 # or: yarn workspace web run build
 ```
 
 **Backend**
+
 ```bash
 yarn build:server
 # or: yarn workspace server run build
@@ -101,11 +104,13 @@ yarn workspace web run config:prod
 ### Deployment (Cloudflare Workers)
 
 **Deploy to dev environment**
+
 ```bash
 yarn workspace server run deploy
 ```
 
 **Deploy to production**
+
 ```bash
 yarn workspace server run deploy-prod
 ```

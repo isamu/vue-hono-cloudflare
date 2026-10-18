@@ -7,6 +7,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 This is a Vue 3 + Hono + Cloudflare Workers application called "mulmocast". It's a monorepo using Yarn workspaces with a clear separation between frontend (Vue SPA) and backend (Hono API).
 
 **Key Architecture:**
+
 - **Frontend**: Vue 3 SPA in `web/` workspace with Tailwind CSS v4, Vue Router with i18n support, and shadcn-vue UI components
 - **Backend**: Hono server in `server/` workspace running on Cloudflare Workers
 - **Deployment**: Cloudflare Workers with single-page-application asset handling
@@ -89,12 +90,14 @@ yarn workspace web run config:prod
 ### Frontend (`web/`)
 
 **Router Setup:**
+
 - Uses Vue Router with `createWebHistory`
 - Internationalized routing: `/:lang(en|ja)?` prefix for all routes
 - Layout component wraps all page routes
 - Supported languages: English (en), Japanese (ja)
 
 **Key Dependencies:**
+
 - Vue 3.5 with Composition API
 - Vue Router for SPA navigation
 - Vue I18n for internationalization (composition mode, not legacy)
@@ -104,12 +107,14 @@ yarn workspace web run config:prod
 - @unhead/vue for meta tag management
 
 **Configuration:**
+
 - Config files in `web/src/configs/` - `config.ts` is generated from `config-dev.ts` or `config-prod.ts`
 - Vite uses `@` alias pointing to `web/src/`
 - ESLint configured with strict TypeScript rules, Vue rules, and SonarJS
 - Prettier integration with Tailwind plugin
 
 **UI Components:**
+
 - Located in `web/src/components/ui/`
 - ESLint ignores `src/components/ui/**` (auto-generated shadcn components)
 - Uses class-variance-authority and clsx for styling utilities
@@ -117,11 +122,13 @@ yarn workspace web run config:prod
 ### Backend (`server/`)
 
 **Hono API:**
+
 - Entry point: `server/src/index.ts`
 - Example endpoint: `POST /api/echo` - accepts `{ text: string }`, returns uppercased text
 - Type-safe with Cloudflare Workers types
 
 **Deployment:**
+
 - Wrangler config: `wrangler.jsonc` at root
 - Worker name: `mulmocast-dev` (dev), `mulmocast-prod` (production)
 - Static assets served from `web/dist` with SPA fallback
